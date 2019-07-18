@@ -1,5 +1,5 @@
 # guidemo
 
-`demo` is spring boot project providing gui demo restful services.
+`demo` is a spring boot project providing gui demo restful services.
 
-`gui` is angular project.
+`gui` is an angular project.
