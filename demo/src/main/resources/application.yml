@@ -1,0 +1,17 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      # format output
+      indent_output: true
+      fail_on_empty_beans: false
+    #JsonInclude.Include.ALWAYS
+    #JsonInclude.Include.NON_DEFAULT
+    #JsonInclude.Include.NON_EMPTY
+    #JsonInclude.Include.NON_NULL
+    defaultPropertyInclusion: NON_EMPTY
+    deserialization:
+      fail_on_unknown_properties: true
+    parser:
+      allow_unquoted_control_chars: true
+      allow_single_quotes: true
