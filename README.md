@@ -1,4 +1,4 @@
-# gui
+# guidemo
 
 `demo` is spring boot project providing gui demo restful services.
 
