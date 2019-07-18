@@ -15,6 +15,8 @@ public class Device {
 		this.id = id;
 		this.name = name;
 		this.ip = ip;
+		
+		this.createdDate = new Date();
 	}
 
 	public long getId() {

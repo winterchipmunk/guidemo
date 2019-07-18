@@ -14,7 +14,7 @@ import com.fortinet.fortinac.demo.device.domain.Device;
 import com.fortinet.fortinac.demo.device.service.DeviceService;
 
 @RestController
-@RequestMapping("/api/device")
+@RequestMapping("/api/v1/device")
 @CrossOrigin(origins = "*")
 public class DeviceController {	
 	@Autowired

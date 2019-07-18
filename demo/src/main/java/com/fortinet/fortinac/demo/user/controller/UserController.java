@@ -14,7 +14,7 @@ import com.fortinet.fortinac.demo.user.domain.User;
 import com.fortinet.fortinac.demo.user.service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/v1/user")
 @CrossOrigin(origins = "*")
 public class UserController {	
 	@Autowired

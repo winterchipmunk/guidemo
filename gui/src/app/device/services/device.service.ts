@@ -5,7 +5,7 @@ import { catchError, map, tap, retry } from 'rxjs/operators';
 
 import { Device } from './device'
 
-const DEVICE_URL = "http://localhost:8080/api/device";
+const DEVICE_URL = "http://localhost:8080/api/v1/device";
 
 @Injectable({
   providedIn: 'root'
