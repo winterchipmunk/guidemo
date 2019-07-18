@@ -8,6 +8,6 @@ All commands below should be run under the project root
 # build latest
 mvn clean install
 
-# generate schemas
+# start web server
 java -jar target/demo-0.0.1-SNAPSHOT.jar
 ```
