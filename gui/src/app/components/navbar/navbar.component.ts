@@ -1,7 +1,9 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
+import { FormGroupMaker } from './navbar.desc'
 
 @Component({
   selector: 'app-navbar',
@@ -11,13 +13,23 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
     private listTitles: any[];
     location: Location;
-      mobile_menu_visible: any = 0;
+    mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(location: Location,  private element: ElementRef, private router: Router) {
-      this.location = location;
-          this.sidebarVisible = false;
+    searchForm : FormGroup;
+
+    constructor(
+        location: Location,  
+        private element: ElementRef, 
+        private router: Router,
+        private fb: FormBuilder
+        ) {
+
+        this.location = location;
+        this.sidebarVisible = false;
+
+        this.searchForm = FormGroupMaker.makeFormGroup(fb);
     }
 
     ngOnInit(){
@@ -34,6 +46,10 @@ export class NavbarComponent implements OnInit {
      });
     }
 
+    onSearch() {
+
+    }
+
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const body = document.getElementsByTagName('body')[0];
@@ -45,12 +61,14 @@ export class NavbarComponent implements OnInit {
 
         this.sidebarVisible = true;
     };
+
     sidebarClose() {
         const body = document.getElementsByTagName('body')[0];
         this.toggleButton.classList.remove('toggled');
         this.sidebarVisible = false;
         body.classList.remove('nav-open');
     };
+
     sidebarToggle() {
         // const toggleButton = this.toggleButton;
         // const body = document.getElementsByTagName('body')[0];
